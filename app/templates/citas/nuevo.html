@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Nueva Cita</h1>
+
+<form method="POST">
+
+    <div class="mb-3">
+
+        <label>Fecha</label>
+
+        <input
+            type="date"
+            name="fecha"
+            class="form-control"
+        >
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Hora</label>
+
+        <input
+            type="time"
+            name="hora"
+            class="form-control"
+        >
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Medico ID</label>
+
+        <input
+            type="number"
+            name="medico_id"
+            class="form-control"
+        >
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Paciente ID</label>
+
+        <input
+            type="number"
+            name="paciente_id"
+            class="form-control"
+        >
+
+    </div>
+
+    <button class="btn btn-success">
+        Guardar
+    </button>
+
+</form>
+
+{% endblock %}

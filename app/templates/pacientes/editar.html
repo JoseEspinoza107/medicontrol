@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Editar Paciente</h1>
+
+<form method="POST">
+
+    <div class="mb-3">
+
+        <label>Nombre</label>
+
+        <input
+            type="text"
+            name="nombre"
+            class="form-control"
+            value="{{ paciente.nombre }}"
+        >
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Telefono</label>
+
+        <input
+            type="text"
+            name="telefono"
+            class="form-control"
+            value="{{ paciente.telefono }}"
+        >
+
+    </div>
+
+    <button class="btn btn-primary">
+        Actualizar
+    </button>
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Editar Cita</h1>
+
+<form method="POST">
+
+    <div class="mb-3">
+
+        <label>Fecha</label>
+
+        <input
+            type="date"
+            name="fecha"
+            class="form-control"
+            value="{{ cita.fecha }}"
+        >
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Hora</label>
+
+        <input
+            type="time"
+            name="hora"
+            class="form-control"
+            value="{{ cita.hora }}"
+        >
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Medico ID</label>
+
+        <input
+            type="number"
+            name="medico_id"
+            class="form-control"
+            value="{{ cita.medico_id }}"
+        >
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Paciente ID</label>
+
+        <input
+            type="number"
+            name="paciente_id"
+            class="form-control"
+            value="{{ cita.paciente_id }}"
+        >
+
+    </div>
+
+    <button class="btn btn-primary">
+        Actualizar
+    </button>
+
+</form>
+
+{% endblock %}

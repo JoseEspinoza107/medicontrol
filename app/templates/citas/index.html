@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="mb-4">Lista de Citas</h1>
+
+<a href="/citas/nuevo" class="btn btn-success mb-3">
+    Nuevo
+</a>
+
+<table class="table table-striped table-bordered">
+
+    <thead class="table-dark">
+
+        <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Medico ID</th>
+            <th>Paciente ID</th>
+            <th>Acciones</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        {% for cita in citas %}
+
+        <tr>
+
+            <td>{{ cita.id }}</td>
+
+            <td>{{ cita.fecha }}</td>
+
+            <td>{{ cita.hora }}</td>
+
+            <td>{{ cita.medico_id }}</td>
+
+            <td>{{ cita.paciente_id }}</td>
+
+            <td>
+
+                <a
+                    href="/citas/editar/{{ cita.id }}"
+                    class="btn btn-warning btn-sm"
+                >
+                    Editar
+                </a>
+
+                <a
+                    href="/citas/eliminar/{{ cita.id }}"
+                    class="btn btn-danger btn-sm"
+                >
+                    Eliminar
+                </a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+{% endblock %}
